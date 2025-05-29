@@ -157,7 +157,7 @@ a {
 
 
 
-@media screen and (max-width: 768px) and (max-width: 820px) {
+@media screen and (max-width: 768px) and (max-width: 1199.98px) {
     .toggle-menu {
         display: flex;
         flex-direction: column;
