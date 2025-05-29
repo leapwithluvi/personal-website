@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Serif JP", serif;
+}
+
+body {
+    overflow-x: hidden;
+    background: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+section {
+    height: 100vh;
+}
+
+.container {
+    /* background-color: #F6C90E; */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+
+}
+
+/* Navigation Bar CSS */
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+    padding: 40px 60px;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 8.36px 7.896px #88421c, 0 8.36px 7.896px #88421c;
+}
+
+.navbar .navbar-nav {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+    transition: 0.4s;
+    font-size: 15px;
+    text-shadow: 0 8.36px 7.896px #88421c, 0 8.36px 7.896px #88421c;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #F6C90E;
+}
+
+.navbar .navbar-nav .nav-link-btn {
+    background-color: #481a16;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 15px;
+}
+
+.navbar .navbar-nav .nav-link-btn:hover {
+    background-color: #e59653;
+} 
+
+/* Home CSS */
+
+.hero {
+    background-image: url("../img/home-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container-home {
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    margin-top: 4rem;
+    position: relative;
+}
+
+
+.container-home h1 {
+    font-size: 5rem;
+    text-align: left;
+    color: white;
+    max-width: 600px;
+    margin: 0;
+    text-shadow: 0 8.36px 7.896px #88421c, 0 8.36px 7.896px #88421c;
+}
+
+/* About */
+.container-about {
+    border: 2px solid black;
+    background-color: #e59653;
+    height: 100vh;
+    margin: 50px 0;
+}
+
+/* project */
+.container-project {
+    border: 2px solid black;
+    background-color: #e59653;
+    height: 100vh;
+    margin: 50px 0;
+}
+
+/* sertifikat */
+.container-sertifikat {
+    border: 2px solid black;
+    background-color: #e59653;
+    height: 100vh;
+    margin: 50px 0;
+}
+
+/* contact */
+.container-contact {
+    border: 2px solid black;
+    background-color: #e59653;
+    height: 100vh;
+    margin: 50px 0;
+}
+
+
+
+/* responsive navbar / home*/
+@media screen and (max-width: 768px) {
+    .toggle-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        cursor: pointer;
+        margin: -10px;
+        z-index: 2;
+    }
+
+    .toggle-menu span {
+        display: block;
+        background-color: white;
+        height: 2px;
+        width: 35px;
+    }
+
+    .navbar {
+        position: relative;
+        padding: 20px 45px;
+    }
+
+    .navbar .navbar-nav {
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: -800px;
+        right: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 0;
+    }
+
+    .navbar .navbar-nav .nav-link-btn {
+        border: 2px solid white;
+    }
+
+    .navbar .navbar-nav.show {
+        top: 0;
+    }
+
+    .navbar .logo {
+        z-index: 2;
+    }
+
+    /* home */
+    .hero {
+        background-position: center top;
+    }
+
+    .container-home {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .container-home h1 {
+        text-align: left;
+        margin-top: 7.5rem;
+        font-size: 3.5rem;
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container-home h1 {
+        text-align: left;
+        margin-top: 8rem;
+        font-size: 2.5rem;
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .container-home h1 {
+        text-align: left;
+        margin-top: 8rem;
+        font-size: 2rem;
+        max-width: 768px;
+    }
+}
